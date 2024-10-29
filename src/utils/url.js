@@ -24,7 +24,7 @@ function openOKXDeeplinkWithFallback(deeplinkUrl) {
     const fullUrl = getUniversalLink(deeplinkUrl);
     const isTelegram = !!((_a = getWindow()) === null || _a === void 0 ? void 0 : _a.TelegramWebviewProxy);
     const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-    console.log("openOKXDeeplinkWithFallback fullUrl: 0001", fullUrl);
+    console.log("openOKXDeeplinkWithFallback fullUrl: 0001 0000", fullUrl);
     let deepLinkOpened = false;
     const timeoutDuration = 1500; // 1.5秒的等待时间
     const startTime = Date.now();

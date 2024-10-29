@@ -3,7 +3,6 @@
     "target": "es2016",
     "module": "commonjs",
     "declaration": true,
-    // 生成声明文件
     "strict": true,
     "esModuleInterop": true,
     "moduleResolution": "node",
@@ -12,17 +11,15 @@
     "forceConsistentCasingInFileNames": true,
     "typeRoots": [
       "./srcts/global.d.ts",
-      // 确保包含自定义声明文件的路径
       "./node_modules/@types"
     ],
     "paths": {
       "srcts/*": ["./srcts/*"]
     },
     "baseUrl": "./",
-    "outDir": "./src"
+    "outDir": "./dist"
   },
-  "include": [
-    "./srcts"
-  ],
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules", "dist"]
 }
   

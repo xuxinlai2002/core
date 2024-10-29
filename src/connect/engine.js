@@ -106,6 +106,7 @@ class Engine {
                 redirect: (_b = sessionConfig === null || sessionConfig === void 0 ? void 0 : sessionConfig.redirect) !== null && _b !== void 0 ? _b : "none"
             };
             const connectRequestStr = JSON.stringify(connectRequest);
+            (0, log_1.logDebug)("connectRequestStr", connectRequestStr);
             const utf8Array = new TextEncoder().encode(connectRequestStr);
             const base64Encoded = btoa(String.fromCharCode(...utf8Array));
             const deeplinkUrl = `${protocol_1.standardDeeplink}?param=${base64Encoded}`;

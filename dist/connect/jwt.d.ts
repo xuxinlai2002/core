@@ -1,0 +1,37 @@
+export const __esModule: boolean;
+export const JWTHeaderType: "dapp";
+export const JWT_IRIDIUM_ALG: "EdDSA";
+export const JWT_IRIDIUM_TYP: "JWT";
+export const JWT_DELIMITER: ".";
+export const JWT_ENCODING: "base64url";
+export const JSON_ENCODING: "utf8";
+export const DATA_ENCODING: "utf8";
+export const KEY_PAIR_SEED_LENGTH: 32;
+export const DID_DELIMITER: ":";
+export const DID_PREFIX: "did";
+export const DID_METHOD: "key";
+export const MULTICODEC_ED25519_ENCODING: "base58btc";
+export const MULTICODEC_ED25519_BASE: "z";
+export const MULTICODEC_ED25519_HEADER: "K36";
+export const MULTICODEC_ED25519_LENGTH: 32;
+export function generateKeyPair(): any;
+export function decodeJSON(str: any): any;
+export function encodeJSON(val: any): string;
+export function encodeIss(publicKey: any): string;
+export function decodeIss(issuer: any): Uint8Array;
+export function encodeSig(bytes: any): string;
+export function decodeSig(encoded: any): Uint8Array;
+export function encodeData(params: any): Uint8Array;
+export function decodeData(data: any): {
+    header: any;
+    payload: any;
+};
+export function encodeJWT(params: any): string;
+export function decodeJWT(jwt: any): {
+    header: any;
+    payload: any;
+    signature: Uint8Array;
+    data: Uint8Array;
+};
+export function signJWT(sub_1: any, aud_1: any, ttl_1: any, keyPair_1: any, ...args: any[]): any;
+export function verifyJWT(jwt: any): any;

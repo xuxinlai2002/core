@@ -1,0 +1,23 @@
+export const __esModule: boolean;
+export const RANDOM_LENGTH: 32;
+export function hexToByteArray(hexString: any): Uint8Array;
+export function toHexString(byteArray: any): string;
+export function concatUint8Arrays(buffer1: any, buffer2: any): Uint8Array;
+export function splitToUint8Arrays(array: any, index: any): any[];
+export function base64encode(value: any, urlSafe: any): any;
+export function base64decode(value: any, urlSafe: any): {
+    toString(): any;
+    toObject(): any;
+    toUint8Array(): any;
+};
+export function checkWSUrl(url: any): boolean;
+export function hashKey(key: any, encode?: string): string;
+export function generateRandomBytes32(): any;
+export function generateTopic(): string;
+export function isIos(): boolean;
+export function resolveWebSocketImplementation(): any;
+export function hasBuiltInWebSocket(): boolean;
+export function hasLocalStorage(): boolean;
+export function resolveLocalStorage(): any;
+export function isBrowser(): boolean;
+export function isValidObject(obj: any): number | false;

@@ -58,5 +58,6 @@ export interface ProviderInfo {
     chainId: string;
 }
 export declare const NameSpaceKeyEip155 = "eip155";
-export declare const NameSpaceKeySOL = "sol";
+export declare const NameSpaceKeySOL = "solana";
 export declare const NameSpaceKeyTON = "ton";
+export declare const NameSpaceKeySui = "sui";

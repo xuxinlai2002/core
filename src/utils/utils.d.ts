@@ -1,0 +1,30 @@
+import { SupportedEncodings } from 'uint8arrays/from-string';
+export declare function hexToByteArray(hexString: string): Uint8Array;
+export declare function toHexString(byteArray: Uint8Array): string;
+export declare function concatUint8Arrays(buffer1: Uint8Array, buffer2: Uint8Array): Uint8Array;
+export declare function splitToUint8Arrays(array: Uint8Array, index: number): Uint8Array[];
+export declare function base64encode(value: any, urlSafe: boolean): string;
+export declare function base64decode(value: string, urlSafe: boolean): {
+    toString(): string;
+    toObject(): any;
+    toUint8Array(): Uint8Array;
+};
+export declare function checkWSUrl(url: string): boolean;
+export declare const resolveWebSocketImplementation: () => {
+    new (url: string | URL, protocols?: string | string[]): WebSocket;
+    prototype: WebSocket;
+    readonly CONNECTING: 0;
+    readonly OPEN: 1;
+    readonly CLOSING: 2;
+    readonly CLOSED: 3;
+};
+export declare const hasBuiltInWebSocket: () => boolean;
+export declare const hasLocalStorage: () => boolean;
+export declare const resolveLocalStorage: () => Storage;
+export declare const isBrowser: () => boolean;
+export declare const RANDOM_LENGTH = 32;
+export declare function hashKey(key: string, encode?: SupportedEncodings): string;
+export declare function generateRandomBytes32(): Uint8Array;
+export declare function generateTopic(): string;
+export declare const isValidObject: (obj: any) => number | false;
+export declare function isIos(): boolean;

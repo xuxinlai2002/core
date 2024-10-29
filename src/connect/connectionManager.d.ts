@@ -1,0 +1,35 @@
+import { ConnectInfo, ErrorResponse } from './constants';
+import { ConnectionManagerInterface } from './connectionManagerInterface';
+import { EventEmitter } from "eventemitter3";
+export declare class ConnectionManager implements ConnectionManagerInterface {
+    private connector;
+    private crypto;
+    private connectedWalletPK;
+    private connectStorage;
+    private packageId;
+    private jwtKeyPair;
+    events: EventEmitter<string | symbol, any>;
+    currentTopic: string;
+    private timeLog?;
+    constructor();
+    private refreshPackageId;
+    private saveCryptoKeyPair;
+    private getCachedCryptoKeyPair;
+    private saveJWTKeyPair;
+    private getCachedJWTKeyPair;
+    private isWalletPKReady;
+    private makeJWT;
+    private parsePackage;
+    restoreConnect(topic: string): Promise<void>;
+    getConnectInfo(): ConnectInfo;
+    connect(fromRestore?: boolean): Promise<void>;
+    disconnect(fromRestore?: boolean): Promise<void>;
+    addListener(event: any, success: Function, fail: Function): void;
+    send(msg: string): Promise<number>;
+    sendACK(msgId: string, success: boolean, reason?: ErrorResponse | undefined): Promise<void>;
+    sendReceive(msgId: string, messageId: string, topic: string): Promise<void>;
+    sendFetchAndConsumeMessages(msgId: string, topic: string): Promise<void>;
+    cleanCache(): Promise<void>;
+    saveSessionContent(key: string, data: unknown): void;
+    getSessionContent(key: string): any;
+}
